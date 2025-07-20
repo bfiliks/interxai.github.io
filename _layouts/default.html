@@ -1,29 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>{{ page.title }} - InterXAI</title>
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style>
-    body { font-family: Arial, sans-serif; margin: 2em; background-color: #f5f7fa; }
-    nav a { margin: 0 1em; text-decoration: none; color: #3246a8; }
-    footer { margin-top: 2em; font-size: 0.8em; color: #555; }
+    :root {
+      --bg: #ffffff;
+      --text: #000000;
+      --link: #007acc;
+      --card: #f7f7f7;
+    }
+
+    [data-theme="dark"] {
+      --bg: #1e1e1e;
+      --text: #ffffff;
+      --link: #4fc3f7;
+      --card: #2c2c2c;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: sans-serif;
+      padding: 1rem;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    .blog-card {
+      background: var(--card);
+      color: var(--text);
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      padding: 1rem;
+      margin: 0.5rem 0;
+    }
+
+    header, footer {
+      margin-bottom: 2rem;
+    }
+
+    #theme-toggle {
+      float: right;
+      background: transparent;
+      border: 1px solid var(--text);
+      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      color: var(--text);
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>InterXAI</h1>
+    <button id="theme-toggle">🌓 Toggle Theme</button>
+    <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
     <nav>
-      <a href="{{ site.baseurl }}/">Home</a>
-      <a href="{{ site.baseurl }}/about">About</a>
-      <a href="{{ site.baseurl }}/collaborate">Collaborate</a>
+      <a href="{{ site.baseurl }}/">Home</a> |
+      <a href="{{ site.baseurl }}/about/">About</a> |
+      <a href="{{ site.baseurl }}/collaborate/">Collaborate</a> |
       <a href="{{ site.baseurl }}/blog/">Blog</a>
     </nav>
+    <hr>
   </header>
+
   <main>
     {{ content }}
   </main>
+
   <footer>
-    <p>&copy; 2025 InterXAI Project</p>
+    <hr>
+    <p>© 2025 InterXAI Project</p>
   </footer>
+
+  <script>
+    const toggle = document.getElementById("theme-toggle");
+    const currentTheme = localStorage.getItem("theme");
+
+    if (currentTheme) {
+      document.documentElement.setAttribute("data-theme", currentTheme);
+    }
+
+    toggle.addEventListener("click", () => {
+      let theme = document.documentElement.getAttribute("data-theme");
+      if (theme === "dark") {
+        document.documentElement.setAttribute("data-theme", "light");
+        localStorage.setItem("theme", "light");
+      } else {
+        document.documentElement.setAttribute("data-theme", "dark");
+        localStorage.setItem("theme", "dark");
+      }
+    });
+  </script>
 </body>
 </html>
