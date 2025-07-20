@@ -2,7 +2,7 @@
 layout: post
 title: "Why We Built InterXAI: Origins and Vision"
 date: 2025-07-20
-categories: updates vision research
+categories: vision
 ---
 
 The InterXAI project was born out of a critical need: bridging the gap between humanistic critique and the rapidly evolving field of Explainable AI (XAI). While XAI tools can output probabilities, saliency maps, or attention visualizations, their interpretability still lags behind the nuance found in literary or cultural criticism.
