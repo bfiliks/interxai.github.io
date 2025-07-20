@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Welcome to the InterXAI Blog"
 date:   2025-07-20 12:00:00 +0000
 categories: updates demo development
