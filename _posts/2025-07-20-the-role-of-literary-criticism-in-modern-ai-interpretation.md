@@ -2,7 +2,7 @@
 layout: post
 title: "The Role of Literary Criticism in Modern AI Interpretation"
 date: 2025-07-20
-categories: theory ai humanities
+categories: theory
 ---
 
 What can literary criticism teach us about AI?
