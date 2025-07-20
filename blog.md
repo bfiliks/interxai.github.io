@@ -6,6 +6,8 @@ permalink: /blog/
 
 # 📰 All Blog Posts
 
+<!-- DEBUG: Below is the post loop -->
+
 <ul>
   {% for post in site.posts %}
     <li>
@@ -15,3 +17,4 @@ permalink: /blog/
     </li>
   {% endfor %}
 </ul>
+
