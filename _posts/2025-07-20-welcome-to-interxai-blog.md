@@ -2,7 +2,7 @@
 layout: post
 title:  "Welcome to the InterXAI Blog"
 date: 2025-07-20
-categories: updates demo development
+categories: updates
 ---
 
 🚀 **InterXAI is now live!**
