@@ -6,8 +6,6 @@ permalink: /blog/
 
 # 📰 All Blog Posts
 
-Browse all blog updates from the InterXAI project:
-
 <ul>
   {% for post in site.posts %}
     <li>
