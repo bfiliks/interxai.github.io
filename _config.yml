@@ -1,9 +1,4 @@
-title: InterXAI
-email: felixo2@illinois.edu
-description: Human-Centered Explainable AI meets Intertextuality
-baseurl: "/interxai.github.io"
-url: "https://bfiliks.github.io"
-
+title: InterXAI Blog Demo
 collections:
   posts:
     output: true
