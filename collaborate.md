@@ -1,8 +1,16 @@
 ---
 layout: default
 title: Collaborate
+permalink: /collaborate/
 ---
 
-## Get Involved
+# Collaborate with Us
 
-Interested in contributing to InterXAI? Sign up and join our community of humanists, developers, and researchers.
+We're open to partnerships with researchers, educators, developers, and institutions.
+
+You can:
+- Propose a project idea
+- Contribute to our blog
+- Help us build or test InterXAI apps
+
+📧 Contact us at: interxai.project@gmail.com
