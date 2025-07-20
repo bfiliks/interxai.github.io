@@ -2,7 +2,7 @@
 layout: post
 title: "Walkthrough: Comparing Human and Machine Explanations"
 date: 2025-07-20
-categories: demo human-in-the-loop critique
+categories: demo
 ---
 
 What happens when we compare GPT's interpretation of a text with a scholar's?
