@@ -1,0 +1,8 @@
+title: InterXAI
+email: your-email@example.com
+description: Human-Centered Explainable AI meets Intertextuality
+
+
+collections:
+  posts:
+    output: true
