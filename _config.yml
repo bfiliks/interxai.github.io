@@ -1,4 +1,8 @@
 title: InterXAI Blog Demo
-collections:
-  posts:
-    output: true
+baseurl: "/interxai.github.io"
+url: "https://bfiliks.github.io"
+theme: minima
+
+# DO NOT include "posts" under collections
+# Instead, just confirm Markdown and plugins if needed
+markdown: kramdown
