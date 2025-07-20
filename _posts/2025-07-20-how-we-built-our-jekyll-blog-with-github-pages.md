@@ -2,7 +2,7 @@
 layout: post
 title: "How We Built Our Jekyll Blog with GitHub Pages"
 date: 2025-07-20
-categories: development tutorial jekyll
+categories: development
 ---
 
 This blog you're reading is powered by Jekyll and hosted on GitHub Pages!
