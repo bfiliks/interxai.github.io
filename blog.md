@@ -44,9 +44,9 @@ permalink: /blog/
   <div class="blog-grid">
     {% for post in group.items %}
       <div class="blog-card">
-        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
         <small>{{ post.date | date: "%B %d, %Y" }}</small>
-        <p>{{ post.excerpt }}</p>
+        <p>{{ post.excerpt | default: post.content | truncatewords: 30 }}</p>
       </div>
     {% endfor %}
   </div>
