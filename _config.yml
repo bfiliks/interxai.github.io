@@ -3,6 +3,9 @@ baseurl: "/interxai.github.io"
 url: "https://bfiliks.github.io"
 theme: minima
 
-# DO NOT include "posts" under collections
-# Instead, just confirm Markdown and plugins if needed
 markdown: kramdown
+
+# Optional GitHub Pages settings
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
