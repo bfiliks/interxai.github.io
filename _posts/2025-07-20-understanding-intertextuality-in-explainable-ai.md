@@ -2,7 +2,7 @@
 layout: post
 title: "Understanding Intertextuality in Explainable AI"
 date: 2025-07-20
-categories: theory intertextuality explainability
+categories: theory
 ---
 
 Intertextuality is a foundational concept in literary theory, but it has profound implications for Explainable AI. At its core, intertextuality refers to how texts draw meaning from other texts—through allusion, quotation, influence, or structure.
