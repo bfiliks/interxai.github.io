@@ -1,7 +1,7 @@
 title: InterXAI
-email: your-email@example.com
+email: felixo2@illinois.edu
 description: Human-Centered Explainable AI meets Intertextuality
-
+baseurl: "/interxai.github.io"
 
 collections:
   posts:
