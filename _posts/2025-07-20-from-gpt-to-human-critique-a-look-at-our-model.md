@@ -2,7 +2,7 @@
 layout: post
 title: "From GPT to Human Critique: A Look at Our Model"
 date: 2025-07-20
-categories: demo modeling architecture
+categories: modeling
 ---
 
 Our InterXAI pipeline combines three layers of interpretation:
