@@ -22,4 +22,4 @@ A literary scholar compares the poem with biblical Psalms and Renaissance texts,
 - **Focus:** Intertextual references and poetic lineage
 - **Advantage:** Depth of cultural resonance and scholarly context
 
-➡️ [← Back to Case Studies](/case-studies/)
+➡️ [← Back to Case Studies]({{ site.baseurl }}/case-studies/)
