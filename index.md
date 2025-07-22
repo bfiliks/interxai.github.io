@@ -35,14 +35,28 @@ By examining **text reuse, metaphors, references, or alternative framings**, we 
 
 ## 💡 Sample Use Cases
 
-- Analyzing how users interpret LLM-generated answers via user comments
-- Reframing algorithmic recommendations through narrative theory
+- Analyzing how users interpret LLM-generated answers via user comments  
+- Reframing algorithmic recommendations through narrative theory  
 - Highlighting text reuse or inspiration in machine summaries or predictions
 
 ---
 
-## 🔗 Stay Connected
+## 👤 Meet the Project Lead
 
-We welcome contributions, feedback, and collaborators. [Contact us]({{ site.baseurl }}/about/) or submit a case study to get involved.
+<details>
+  <summary>Click to view</summary>
 
----
+  <section style="margin-top: 1rem;">
+    <div style="display: flex; align-items: center; gap: 1rem;">
+      <img src="{{ site.baseurl }}/assets/img/felix-profile.jpg" alt="Felix B. Oke" style="width: 120px; height: 120px; border-radius: 50%; border: 2px solid #ccc;">
+      <div>
+        <p><strong>Felix B. Oke</strong> is the founder and project lead of InterXAI. With expertise in Digital Humanities, Natural Language Processing, and Explainable AI, Felix is dedicated to bridging critical human insight with algorithmic transparency. He leads the design and development of tools that foreground interpretability and accountability in machine learning systems.</p>
+        <p>📧 <a href="mailto:bfiliks4xt@gmail.com">bfiliks4xt@gmail.com</a> |
+           🔗 <a href="https://github.com/bfiliks" target="_blank">GitHub</a> |
+           🌐 <a href="https://www.linkedin.com/in/felixoke/" target="_blank">LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
+</details>
+
+<p style="text-align: right; font-size: 0.9rem;"><em>🌗 Try switching themes above.</em></p>
