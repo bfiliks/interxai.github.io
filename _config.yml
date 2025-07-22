@@ -1,11 +1,11 @@
 title: "InterXAI: Human-Centered Explainable AI and Intertextual Critique"
 description: A platform for exploring human-centered Explainable AI and intertextual critique.
-url: "https://bfiliks.github.io" # for GitHub Pages
-baseurl: "/interxai.github.io"   # for GitHub Pages — set to "" for Netlify
 
-# Auto-switch baseurl for Netlify if needed (optional)
-# If you want only one config, comment out the baseurl line above when using Netlify
+# Default values (for GitHub Pages)
+url: "https://bfiliks.github.io"
+baseurl: "/interxai.github.io"
 
+# Netlify overrides these via environment variables if set
 theme: minima
 permalink: pretty
 markdown: kramdown
@@ -14,14 +14,12 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-# Enable Netlify Forms
 defaults:
   - scope:
       path: ""
     values:
       layout: default
 
-# Form support (Netlify will detect and process this automatically)
 collections:
   case_studies:
     output: true
