@@ -15,7 +15,7 @@ By linking **literary methods** with **technical interpretation**, we aim to rev
 
 ---
 
-## 🚀 What You Can Do
+## 🚀 What You Can Do with InterXAI
 
 ### 📥 [Submit a Case Study]({{ site.baseurl }}/submit/)
 Share your applied work or conceptual insights on how humans interact with, interpret, or critique AI explanations.
