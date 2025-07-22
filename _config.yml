@@ -1,6 +1,7 @@
 title: "InterXAI: Human-Centered Explainable AI and Intertextual Critique"
-baseurl: ""
+description: A platform for showcasing explainable AI systems with intertextual, human-centered critique.
 url: "https://bfiliks.github.io"
+baseurl: "/interxai.github.io"
 theme: minima
 
 markdown: kramdown
