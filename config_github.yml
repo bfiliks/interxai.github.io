@@ -1,9 +1,8 @@
 title: "InterXAI: Human-Centered Explainable AI and Intertextual Critique"
 description: A platform for exploring human-centered Explainable AI and intertextual critique.
 
-# Netlify/GitHub Pages dual support
-url: "${URL}"        # Will be replaced by Netlify env variable
-baseurl: "${BASEURL}" # Will be replaced by Netlify env variable
+url: "https://bfiliks.github.io"
+baseurl: "/interxai.github.io"
 
 theme: minima
 permalink: pretty
