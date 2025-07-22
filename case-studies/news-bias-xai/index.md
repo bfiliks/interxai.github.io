@@ -19,4 +19,4 @@ GPT condenses news into readable summaries but may reflect subtle political or e
 
 A media scholar critiques the same article, using intertextual comparison with mainstream and independent press to show divergent ideological cues.
 
-➡️ [← Back to Case Studies](/case-studies/)
+➡️ [← Back to Case Studies]({{ site.baseurl }}/case-studies/)
