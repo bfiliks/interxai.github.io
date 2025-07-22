@@ -5,6 +5,8 @@ theme: minima
 
 markdown: kramdown
 
+permalink: pretty
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
