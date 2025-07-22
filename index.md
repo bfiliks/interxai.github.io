@@ -53,7 +53,7 @@ By examining **text reuse, metaphors, references, or alternative framings**, we 
         <p><strong>Felix B. Oke</strong> is the founder and project lead of InterXAI. With expertise in Digital Humanities, Natural Language Processing, and Explainable AI, Felix is dedicated to bridging critical human insight with algorithmic transparency. He leads the design and development of tools that foreground interpretability and accountability in machine learning systems.</p>
         <p>📧 <a href="mailto:bfiliks4xt@gmail.com">bfiliks4xt@gmail.com</a> |
            🔗 <a href="https://github.com/bfiliks" target="_blank">GitHub</a> |
-           🌐 <a href="https://www.linkedin.com/in/felixoke/" target="_blank">LinkedIn</a></p>
+           🌐 <a href="https://www.linkedin.com/in/felix-oke-60294236/" target="_blank">LinkedIn</a></p>
       </div>
     </div>
   </section>
