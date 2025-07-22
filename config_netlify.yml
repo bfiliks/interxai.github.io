@@ -1,0 +1,23 @@
+title: "InterXAI: Human-Centered Explainable AI and Intertextual Critique"
+description: A platform for exploring human-centered Explainable AI and intertextual critique.
+
+url: "https://interxai.netlify.app"
+baseurl: ""  # No baseurl on Netlify
+
+theme: minima
+permalink: pretty
+markdown: kramdown
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+collections:
+  case_studies:
+    output: true
