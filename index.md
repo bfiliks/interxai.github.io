@@ -46,5 +46,3 @@ By examining **text reuse, metaphors, references, or alternative framings**, we 
 We welcome contributions, feedback, and collaborators. [Contact us]({{ site.baseurl }}/about/) or submit a case study to get involved.
 
 ---
-
-© 2025 InterXAI Project — All rights reserved.
