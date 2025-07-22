@@ -5,7 +5,6 @@ theme: minima
 
 markdown: kramdown
 
-# Optional GitHub Pages settings
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
