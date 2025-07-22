@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "3.1.2" # You can update this to match Netlify or your local version
+ruby "3.4.5" # You can update this to match Netlify or your local version
 
 gem "jekyll", "~> 4.3.2"
 gem "webrick", "~> 1.7"          # Needed for Jekyll serve
