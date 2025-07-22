@@ -22,4 +22,4 @@ GPT views this as metaphorical language linked to Hellenistic philosophy.
 
 Theologians draw from Genesis 1, Proverbs 8, and early Logos theology to offer rich doctrinal insight.
 
-➡️ [← Back to Case Studies](/case-studies/)
+➡️ [← Back to Case Studies]({{ site.baseurl }}/case-studies/)
