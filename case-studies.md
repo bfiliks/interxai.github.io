@@ -47,3 +47,11 @@ Explore real-world applications of InterXAI combining explainable AI and human i
     <p>Contrast GPT's reading of John 1:1 with traditional theological exegesis.</p>
   </div>
 </div>
+
+<section style="border: 1px solid #ccc; border-radius: 8px; padding: 1rem; margin-top: 3rem;">
+  <h3>📥 Download Case Study Pack</h3>
+  <p>Get all InterXAI case studies in one ZIP file for offline access, presentations, or workshops.</p>
+  <a href="{{ site.baseurl }}/assets/files/interxai_case_studies.zip" download style="color: #fff; background: #007acc; padding: 0.5rem 1rem; border-radius: 5px; text-decoration: none;">
+    📦 Download ZIP
+  </a>
+</section>
