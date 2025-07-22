@@ -1,5 +1,5 @@
 title: "InterXAI: Human-Centered Explainable AI and Intertextual Critique"
-description: A platform for exploring human-centered Explainable AI and intertextual critique.
+description: "A platform for exploring human-centered Explainable AI and intertextual critique."
 
 url: "https://interxai.netlify.app"
 baseurl: ""  # No baseurl on Netlify
