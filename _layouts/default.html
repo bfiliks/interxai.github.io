@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>{{ page.title }} | {{ site.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- seo -%}
 
   <style>
     :root {
@@ -24,7 +24,9 @@
       background-color: var(--bg);
       color: var(--text);
       font-family: sans-serif;
-      padding: 1rem;
+      margin: 0;
+      padding: 1.5rem;
+      line-height: 1.6;
       transition: background 0.3s, color 0.3s;
     }
 
@@ -33,17 +35,24 @@
       text-decoration: none;
     }
 
-    .blog-card {
-      background: var(--card);
-      color: var(--text);
-      border-radius: 10px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-      padding: 1rem;
-      margin: 0.5rem 0;
+    a:hover {
+      text-decoration: underline;
     }
 
     header, footer {
       margin-bottom: 2rem;
+    }
+
+    nav a {
+      margin-right: 1rem;
+    }
+
+    .blog-card {
+      background: var(--card);
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      margin-bottom: 1rem;
     }
 
     #theme-toggle {
@@ -61,16 +70,15 @@
   <header>
     <button id="theme-toggle">🌓 Toggle Theme</button>
     <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+    <p>{{ site.description }}</p>
     <nav>
-  <a href="{{ site.baseurl }}/">Home</a> |
-  <a href="{{ site.baseurl }}/about/">About</a> |
-  <a href="{{ site.baseurl }}/collaborate/">Collaborate</a> |
-  <a href="{{ site.baseurl }}/case-studies/">Case Studies</a> |
-  <a href="{{ site.baseurl }}/submit/">Submit</a> |
-  <a href="{{ site.baseurl }}/blog/">Blog</a>
-</nav>
-
-
+      <a href="{{ site.baseurl }}/">Home</a>
+      <a href="{{ site.baseurl }}/about/">About</a>
+      <a href="{{ site.baseurl }}/collaborate/">Collaborate</a>
+      <a href="{{ site.baseurl }}/case-studies/">Case Studies</a>
+      <a href="{{ site.baseurl }}/submit/">Submit</a>
+      <a href="{{ site.baseurl }}/blog/">Blog</a>
+    </nav>
     <hr>
   </header>
 
@@ -86,20 +94,15 @@
   <script>
     const toggle = document.getElementById("theme-toggle");
     const currentTheme = localStorage.getItem("theme");
-
     if (currentTheme) {
       document.documentElement.setAttribute("data-theme", currentTheme);
     }
 
     toggle.addEventListener("click", () => {
-      let theme = document.documentElement.getAttribute("data-theme");
-      if (theme === "dark") {
-        document.documentElement.setAttribute("data-theme", "light");
-        localStorage.setItem("theme", "light");
-      } else {
-        document.documentElement.setAttribute("data-theme", "dark");
-        localStorage.setItem("theme", "dark");
-      }
+      const theme = document.documentElement.getAttribute("data-theme");
+      const newTheme = theme === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", newTheme);
+      localStorage.setItem("theme", newTheme);
     });
   </script>
 </body>
