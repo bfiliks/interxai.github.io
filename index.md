@@ -3,12 +3,6 @@ layout: default
 title: Home
 ---
 
-# 🤖 InterXAI: Human-Centered Explainable AI and Intertextual Critique
-
-*A platform exploring human perspectives in machine intelligence through interpretive and contextual critique.*
-
----
-
 InterXAI brings together scholars, developers, and critics to reimagine Explainable AI (XAI) through the lens of human-centered design and **intertextual analysis**. We believe explanations aren't just for machines—they’re for people. 
 
 By linking **literary methods** with **technical interpretation**, we aim to reveal the layered meanings in model behavior, decisions, and narratives.
