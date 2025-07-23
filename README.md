@@ -24,7 +24,7 @@ streamlit run app/ui_components.py
 - `tests/` – Unit and integration tests
 
 ## 🧱 System Design
-![System Diagram](assests/interxai2.ng)
+![System Diagram](assets/img/interxai2.png)
 
 ## License
 MIT License
