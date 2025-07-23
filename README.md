@@ -23,5 +23,8 @@ streamlit run app/ui_components.py
 - `data/` – Text data and annotation exports
 - `tests/` – Unit and integration tests
 
+## 🧱 System Design
+![System Diagram](docs/assests/interxai2.ng)
+
 ## License
 MIT License
