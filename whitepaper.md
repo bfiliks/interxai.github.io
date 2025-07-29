@@ -49,13 +49,11 @@ By drawing from fields like hermeneutics, reader-response theory, and intertextu
 
 ## 3. Use Cases
 
-| Domain | Application |
-|--------|-------------|
-| **Education** | Teaching AI literacy and critical thinking via annotated model outputs |
-| **Digital Humanities** | Analyzing AI-generated interpretations of historical or literary texts |
-| **Media & Ethics** | Auditing content recommendation or moderation explanations |
-| **NLP Research** | Comparing generated text explanations with scholarly commentary |
-| **Policy & Compliance** | Visualizing accountability in high-stakes automated decisions |
+- **Education**: Teaching AI literacy and critical thinking via annotated model outputs  
+- **Digital Humanities**: Analyzing AI-generated interpretations of historical or literary texts  
+- **Media & Ethics**: Auditing content recommendation or moderation explanations  
+- **NLP Research**: Comparing generated text explanations with scholarly commentary  
+- **Policy & Compliance**: Visualizing accountability in high-stakes automated decisions  
 
 ---
 
