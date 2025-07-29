@@ -1,3 +1,9 @@
+---
+layout: default
+title: White Paper
+permalink: /whitepaper/
+---
+
 # InterXAI White Paper
 
 ## Reimagining Explainable AI through Intertextual Critique  
