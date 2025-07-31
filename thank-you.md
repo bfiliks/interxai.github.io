@@ -4,6 +4,8 @@ title: Thank You
 permalink: /thank-you/
 ---
 
+<div class="thank-you">
+
 # ✅ Submission Received!
 
 Thank you for submitting your case study to **InterXAI**!
@@ -18,3 +20,5 @@ If selected, your work will be featured on our [Case Studies]({{ site.baseurl }}
 <br>
 
 🔙 [Return to Home]({{ site.baseurl }}/)
+
+</div>
