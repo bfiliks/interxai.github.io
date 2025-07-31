@@ -1,57 +1,49 @@
 # shap_explainer.py
-"""
-SHAP Explainer Module for InterXAI
-Generates SHAP explanations for NLP models.
-"""
-
 import shap
 import numpy as np
-import transformers
-from transformers import pipeline, AutoTokenizer, AutoModelForSequenceClassification
-import functools
+from sklearn.pipeline import Pipeline
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import LogisticRegression
+import joblib
 
-# Load model and tokenizer (replace with your preferred model)
-MODEL_NAME = "distilbert-base-uncased-finetuned-sst-2-english"
+# Caching and error handling
+class SHAPExplainer:
+    def __init__(self):
+        self.model = self._load_model()
+        self.vectorizer = self.model.named_steps["tfidfvectorizer"]
+        self.explainer = shap.Explainer(self.model.predict_proba, self.vectorizer)
 
-try:
-    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-    model = AutoModelForSequenceClassification.from_pretrained(MODEL_NAME)
-    classifier = pipeline("text-classification", model=model, tokenizer=tokenizer, return_all_scores=True)
-except Exception as e:
-    print(f"Error loading model or tokenizer: {e}")
-    tokenizer = None
-    model = None
-    classifier = None
+    def _load_model(self):
+        try:
+            return joblib.load("model_pipeline.pkl")
+        except Exception:
+            sample_texts = [
+                "Good AI explanation",
+                "Poor result",
+                "Fair accuracy and transparency",
+                "Unclear model output"
+            ]
+            labels = [1, 0, 1, 0]
+            model = Pipeline([
+                ("tfidfvectorizer", TfidfVectorizer()),
+                ("classifier", LogisticRegression())
+            ])
+            model.fit(sample_texts, labels)
+            joblib.dump(model, "model_pipeline.pkl")
+            return model
 
-def _predict_proba(texts):
-    """Wrapper for pipeline output suitable for SHAP."""
-    if classifier is None:
-        raise RuntimeError("Model pipeline is not initialized.")
-    results = classifier(texts)
-    return np.array([[x["score"] for x in example] for example in results])
+    def explain(self, text):
+        try:
+            shap_values = self.explainer([text])
+            return {
+                "tokens": shap_values.data[0].tolist(),
+                "importance": shap_values.values[0].tolist()
+            }
+        except Exception as e:
+            return {"error": str(e)}
 
-@functools.lru_cache(maxsize=128)
-def explain_with_shap(text):
-    """
-    Generate SHAP explanation for input text.
-
-    Args:
-        text (str): Input text to explain.
-
-    Returns:
-        dict: Dictionary with tokens and SHAP importance values.
-    """
-    if not tokenizer or not model:
-        return {"error": "Model/tokenizer not initialized."}
-
-    try:
-        explainer = shap.Explainer(_predict_proba, tokenizer)
-        shap_values = explainer([text])
-        tokens = shap_values.data[0]
-        importance = shap_values.values[0].tolist()
-        return {
-            "tokens": tokens,
-            "importance": importance
-        }
-    except Exception as e:
-        return {"error": str(e)}
+# Usage example
+if __name__ == "__main__":
+    explainer = SHAPExplainer()
+    result = explainer.explain("This model is hard to understand.")
+    print(result)
