@@ -10,7 +10,7 @@ We welcome contributions of case studies that showcase human-centered Explainabl
 
 Please fill out the form below. Your submission will be reviewed and may be featured on the InterXAI platform.
 
-<form name="case-study-submission" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/interxai.github.io/thank-you/">
+<form name="case-study-submission" method="POST" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field" action="/interxai.github.io/thank-you/">
   <input type="hidden" name="form-name" value="case-study-submission" />
 
   <p style="display:none">
@@ -27,7 +27,9 @@ Please fill out the form below. Your submission will be reviewed and may be feat
 
   <p><label>Relevant Tags (comma-separated):<br><input type="text" name="tags"></label></p>
 
-  <p><label>PDF/Link to Case Study:<br><input type="url" name="link_or_upload"></label></p>
+  <p><label>PDF Upload (optional):<br><input type="file" name="attachment" accept=".pdf,.doc,.docx,.txt,.md"></label></p>
 
-  <p><button type="submit">Submit Case Study</button></p>
+  <p><label>OR Provide a Link to Case Study:<br><input type="url" name="link"></label></p>
+
+  <p><button type="submit">📤 Submit Case Study</button></p>
 </form>
