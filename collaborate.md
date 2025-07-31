@@ -23,6 +23,7 @@ You can:
     cursor: pointer;
     position: relative;
     list-style: none;
+    margin-bottom: 0.5rem;
   }
 
   .collapsible-help summary::marker,
@@ -52,18 +53,44 @@ You can:
   }
 </style>
 
+---
+
+## ❓ Frequently Asked Questions
+
 <details class="collapsible-help">
-  <summary>❓ How Can I Collaborate Effectively?</summary>
+  <summary>🌍 Who can collaborate with InterXAI?</summary>
   <div>
-    <p>We value contributions from diverse backgrounds. Here are ways to get involved:</p>
+    Anyone passionate about responsible AI, interpretability, or digital humanities is welcome!  
+    We especially encourage students, early-career researchers, artists, educators, and underrepresented voices in tech and humanities.
+  </div>
+</details>
 
+<details class="collapsible-help">
+  <summary>🧠 What kind of projects can I contribute to?</summary>
+  <div>
+    You can help with:
     <ul>
-      <li><strong>Researchers:</strong> Propose a study or co-develop an experimental module with us.</li>
-      <li><strong>Educators:</strong> Use InterXAI materials in class or co-create learning tools.</li>
-      <li><strong>Developers:</strong> Contribute code, design, or usability feedback.</li>
-      <li><strong>Writers:</strong> Submit reflections, tutorials, or case-based blog posts.</li>
+      <li>Case study collection and analysis</li>
+      <li>User interface feedback or design contributions</li>
+      <li>Writing blog posts or tutorials</li>
+      <li>Building visualization components for intertextual analysis</li>
+      <li>Creating teaching modules using InterXAI</li>
     </ul>
+  </div>
+</details>
 
-    <p>Not sure where to begin? Email us and we’ll help match your interests with project needs.</p>
+<details class="collapsible-help">
+  <summary>✍️ Can I contribute blog posts or teaching resources?</summary>
+  <div>
+    Yes! We welcome reflections, walkthroughs, student experiences, sample assignments, and classroom experiments using InterXAI.  
+    These contributions will be featured on our [Blog](/blog/) and credited to you.
+  </div>
+</details>
+
+<details class="collapsible-help">
+  <summary>💬 How do I start collaborating?</summary>
+  <div>
+    Just send us an email at [interxai.project@gmail.com](mailto:interxai.project@gmail.com).  
+    Tell us a bit about your interests, and we'll match you to a current initiative or help shape a new one.
   </div>
 </details>
