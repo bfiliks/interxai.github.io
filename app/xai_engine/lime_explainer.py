@@ -1,33 +1,43 @@
-"""
-lime_explainer.py
-Handles LIME-based model explanation.
-"""
+# lime_explainer.py
+import lime.lime_text
+from sklearn.pipeline import Pipeline
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import LogisticRegression
+import joblib
 
-import functools
-import logging
+class LIMEExplainer:
+    def __init__(self):
+        self.model = self._load_model()
+        self.explainer = lime.lime_text.LimeTextExplainer(class_names=["Negative", "Positive"])
 
-# Simulated LIME functionality (replace with actual implementation)
-def _generate_lime_explanation(text):
-    # TODO: Load actual model and apply LIME explanation logic
-    return {
-        "tokens": ["example", "tokens"],
-        "weights": [0.3, 0.4]
-    }
+    def _load_model(self):
+        try:
+            return joblib.load("model_pipeline.pkl")
+        except Exception:
+            sample_texts = [
+                "Good AI explanation",
+                "Poor result",
+                "Fair accuracy and transparency",
+                "Unclear model output"
+            ]
+            labels = [1, 0, 1, 0]
+            model = Pipeline([
+                ("tfidfvectorizer", TfidfVectorizer()),
+                ("classifier", LogisticRegression())
+            ])
+            model.fit(sample_texts, labels)
+            joblib.dump(model, "model_pipeline.pkl")
+            return model
 
-@functools.lru_cache(maxsize=128)
-def explain_with_lime(text):
-    """
-    Generate explanation using LIME for the given input text.
+    def explain(self, text):
+        try:
+            exp = self.explainer.explain_instance(text, self.model.predict_proba, num_features=5)
+            return dict(exp.as_list())
+        except Exception as e:
+            return {"error": str(e)}
 
-    Args:
-        text (str): Input text to explain.
-
-    Returns:
-        dict: Dictionary with tokens and their importance weights.
-    """
-    try:
-        explanation = _generate_lime_explanation(text)
-        return explanation
-    except Exception as e:
-        logging.error(f"[LIME] Explanation failed: {e}")
-        return {"tokens": [], "weights": []}
+# Usage example
+if __name__ == "__main__":
+    explainer = LIMEExplainer()
+    result = explainer.explain("This model is hard to understand.")
+    print(result)
