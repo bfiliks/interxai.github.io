@@ -80,12 +80,13 @@ You can:
 </details>
 
 <details class="collapsible-help">
-  <summary>✍️ Can I contribute blog posts or teaching resources?</summary>
+  <summary>🧑‍🏫 Can I submit classroom or teaching-related examples?</summary>
   <div>
-    Yes! We welcome reflections, walkthroughs, student experiences, sample assignments, and classroom experiments using InterXAI.  
-    These contributions will be featured on our [Blog](/blog/) and credited to you.
+    <p><strong>Yes!</strong> We welcome reflections, walkthroughs, student experiences, sample assignments, and classroom experiments using <strong>InterXAI</strong>.</p>
+    <p>These contributions will be featured on our <a href="{{ site.baseurl }}/blog/">Blog</a> and credited to you.</p>
   </div>
 </details>
+
 
 <details class="collapsible-help">
   <summary>💬 How do I start collaborating?</summary>
