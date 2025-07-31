@@ -10,9 +10,44 @@ We welcome contributions of case studies that showcase human-centered Explainabl
 
 Please fill out the form below. Your submission will be reviewed and may be featured on the InterXAI platform.
 
-<details>
-  <summary><strong>❓ What is a Case Study? What Should I Submit?</strong></summary>
-  <div style="margin-top: 1rem;">
+<style>
+  .collapsible-help summary {
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    list-style: none;
+  }
+
+  .collapsible-help summary::marker,
+  .collapsible-help summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .collapsible-help summary::before {
+    content: "▶";
+    display: inline-block;
+    margin-right: 0.5em;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .collapsible-help[open] summary::before {
+    transform: rotate(90deg);
+  }
+
+  .collapsible-help div {
+    padding: 0.5rem 0 1rem 1rem;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<details class="collapsible-help">
+  <summary>❓ What is a Case Study? What Should I Submit?</summary>
+  <div>
     <p>A <strong>case study</strong> is a real or hypothetical example that illustrates how human-centered explainability and intertextual critique can be applied in AI contexts.</p>
 
     <h4>✅ Why Submit?</h4>
