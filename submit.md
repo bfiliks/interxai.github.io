@@ -10,6 +10,35 @@ We welcome contributions of case studies that showcase human-centered Explainabl
 
 Please fill out the form below. Your submission will be reviewed and may be featured on the InterXAI platform.
 
+<details>
+  <summary><strong>❓ What is a Case Study? What Should I Submit?</strong></summary>
+
+  <div style="margin-top: 1rem;">
+
+  A case study is a real or hypothetical example that illustrates how human-centered explainability and intertextual critique can be applied in AI contexts.
+
+  ### ✅ Why Submit?
+  Submitting helps InterXAI:
+  - Build a diverse gallery of applied examples  
+  - Highlight community innovations  
+  - Stimulate new research and applications  
+
+  ### 📝 What to Include
+  - **Title** of your case study  
+  - **Summary**: What is it about? What model or dataset did you use?  
+  - **Tags**: E.g., "GPT-4, ethics, metaphor, SHAP, literary analysis"  
+  - **Link or Upload**: Submit your work as a PDF or a link (Google Doc, blog, GitHub, etc.)
+
+  ### 📌 Tips
+  - Showcase how a model was explained, critiqued, or reinterpreted  
+  - Include visuals or commentary if possible  
+  - You don’t have to be an expert—experiences, student work, or exploratory ideas are welcome!
+
+  </div>
+</details>
+
+<br>
+
 <form name="case-study-submission" method="POST" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you/">
   <input type="hidden" name="form-name" value="case-study-submission" />
 
