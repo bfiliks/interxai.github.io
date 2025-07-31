@@ -11,31 +11,53 @@ We welcome contributions of case studies that showcase human-centered Explainabl
 Please fill out the form below. Your submission will be reviewed and may be featured on the InterXAI platform.
 
 <style>
-  .collapsible-help summary {
-    font-weight: bold;
-    cursor: pointer;
-    position: relative;
-    list-style: none;
+  .faq-section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: var(--card);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.04);
   }
 
-  .collapsible-help summary::marker,
-  .collapsible-help summary::-webkit-details-marker {
+  .faq-section details {
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    background: white;
+    transition: background 0.3s;
+  }
+
+  [data-theme="dark"] .faq-section details {
+    background: var(--bg);
+    border-color: #444;
+  }
+
+  .faq-section summary {
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+  }
+
+  .faq-section summary::marker,
+  .faq-section summary::-webkit-details-marker {
     display: none;
   }
 
-  .collapsible-help summary::before {
+  .faq-section summary::before {
     content: "▶";
     display: inline-block;
     margin-right: 0.5em;
     transition: transform 0.2s ease-in-out;
   }
 
-  .collapsible-help[open] summary::before {
+  .faq-section details[open] summary::before {
     transform: rotate(90deg);
   }
 
-  .collapsible-help div {
-    padding: 0.5rem 0 1rem 1rem;
+  .faq-section details div {
+    padding: 0.5rem 0 0.5rem 1rem;
     animation: fadeIn 0.3s ease-in-out;
   }
 
@@ -45,36 +67,54 @@ Please fill out the form below. Your submission will be reviewed and may be feat
   }
 </style>
 
-<details class="collapsible-help">
-  <summary>❓ What is a Case Study? What Should I Submit?</summary>
-  <div>
-    <p>A <strong>case study</strong> is a real or hypothetical example that illustrates how human-centered explainability and intertextual critique can be applied in AI contexts.</p>
+<div class="faq-section">
+  <h3>❓ Frequently Asked Questions about Case Study Submissions</h3>
 
-    <h4>✅ Why Submit?</h4>
-    <ul>
-      <li>Build a diverse gallery of applied examples</li>
-      <li>Highlight community innovations</li>
-      <li>Stimulate new research and applications</li>
-    </ul>
+  <details>
+    <summary>What is a case study?</summary>
+    <div>
+      A <strong>case study</strong> is a real or hypothetical example that demonstrates how human-centered explainability and intertextual critique can be applied in AI contexts. It could involve a project, analysis, or even a classroom experiment.
+    </div>
+  </details>
 
-    <h4>📝 What to Include</h4>
-    <ul>
-      <li><strong>Title</strong> of your case study</li>
-      <li><strong>Summary:</strong> What is it about? What model or dataset did you use?</li>
-      <li><strong>Tags:</strong> E.g., "GPT-4, ethics, metaphor, SHAP, literary analysis"</li>
-      <li><strong>Link or Upload:</strong> Submit your work as a PDF or a link (Google Doc, blog, GitHub, etc.)</li>
-    </ul>
+  <details>
+    <summary>Why should I submit a case study?</summary>
+    <div>
+      Submitting helps InterXAI:
+      <ul>
+        <li>Build a diverse gallery of applied examples</li>
+        <li>Highlight community innovations</li>
+        <li>Stimulate new research and applications</li>
+      </ul>
+    </div>
+  </details>
 
-    <h4>📌 Tips</h4>
-    <ul>
-      <li>Showcase how a model was explained, critiqued, or reinterpreted</li>
-      <li>Include visuals or commentary if possible</li>
-      <li>You don’t have to be an expert—student work, exploratory ideas, and reflections are welcome!</li>
-    </ul>
-  </div>
-</details>
+  <details>
+    <summary>What should I include in my submission?</summary>
+    <div>
+      <ul>
+        <li><strong>Title</strong> of your case study</li>
+        <li><strong>Summary:</strong> What is it about? What model or dataset did you use?</li>
+        <li><strong>Tags:</strong> E.g., "GPT-4, ethics, metaphor, SHAP, literary analysis"</li>
+        <li><strong>Link or Upload:</strong> Submit your work as a PDF or a link (Google Doc, blog, GitHub, etc.)</li>
+      </ul>
+    </div>
+  </details>
 
-<br>
+  <details>
+    <summary>Who can submit?</summary>
+    <div>
+      Anyone! We welcome students, researchers, practitioners, and creative thinkers. You don’t need to be an expert—exploratory projects and reflections are encouraged.
+    </div>
+  </details>
+
+  <details>
+    <summary>What happens after submission?</summary>
+    <div>
+      Your submission will be reviewed by our team. If selected, it will appear on our <a href="/case-studies/">Case Studies</a> page. We may follow up with you if more details are needed.
+    </div>
+  </details>
+</div>
 
 <form name="case-study-submission" method="POST" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you/">
   <input type="hidden" name="form-name" value="case-study-submission" />
