@@ -109,4 +109,3 @@ Website: [https://interxai.netlify.app](https://interxai.netlify.app)
 
 <a href="{{ site.baseurl }}/assets/img/InterXAI_Whitepaper.pdf" download class="download-button">⬇️ Download this Whitepaper (PDF)</a>
 
-
