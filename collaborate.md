@@ -90,7 +90,8 @@ You can:
 <details class="collapsible-help">
   <summary>💬 How do I start collaborating?</summary>
   <div>
-    Just send us an email at [interxai.project@gmail.com](mailto:interxai.project@gmail.com).  
+    Just send us an email at  
+    <a href="mailto:interxai.project@gmail.com">interxai.project@gmail.com</a>.<br><br>
     Tell us a bit about your interests, and we'll match you to a current initiative or help shape a new one.
   </div>
 </details>
