@@ -6,6 +6,8 @@ permalink: /whitepaper/
 
 <div class="whitepaper">
 
+{% capture whitepaper_content %}
+
 # 📄 InterXAI White Paper
 
 ## Reimagining Explainable AI through Intertextual Critique  
@@ -121,5 +123,8 @@ InterXAI values transparency, interpretability, and scholarly openness.
 ## 📥 Download This White Paper
 
 <a href="{{ site.baseurl }}/assets/img/InterXAI_Whitepaper.pdf" download class="download-button">⬇️ Download the InterXAI White Paper (PDF)</a>
+
+{% endcapture %}
+{{ whitepaper_content | markdownify }}
 
 </div>
