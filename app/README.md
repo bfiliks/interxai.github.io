@@ -10,6 +10,29 @@ The InterXAI App provides:
 - Intertextual linking to external corpora
 - A comparison orchestrator for side-by-side visualization of human + machine insight
 
+## 🚀 Features
+
+### 🧠 XAI Engine
+- Supports SHAP, LIME, and other popular model explanation tools
+- Compatible with classification, regression, and generative models
+- Built with extensibility for vision/multi-modal models via API integration
+
+### ✋ Human Annotation Engine
+- Allows users to annotate or critique AI outputs
+- Tags metaphors, omissions, intertextual references, or biases
+- Tracks agreement and divergence among annotators
+
+### 🔗 Intertextual Linker
+- Compares AI output with external texts (Wikipedia, books, archives)
+- Detects reused phrasing, conceptual drift, and textual resonance
+
+### 🧲 Comparison Orchestrator
+- Merges model explanations and human annotations
+- Visualizes insights using dashboards
+- Enables export to PDF, JSON, or CSV for reports
+
+---
+
 ## 📁 Directory Structure
 
 ```
