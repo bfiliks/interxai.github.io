@@ -1,4 +1,3 @@
-# shap_explainer.py
 """
 SHAPExplainer module for InterXAI
 Generates SHAP explanations for model predictions.
@@ -19,16 +18,16 @@ class SHAPExplainer:
 
     def _load_model(self):
         try:
-            model = joblib.load("model_pipeline.pkl")
-            return model
+            return joblib.load("model_pipeline.pkl")
         except FileNotFoundError:
             return self._train_fallback_model()
 
     def _train_fallback_model(self):
-        # Fallback model for testing/demo purposes
         sample_texts = [
-            "Good AI explanation", "Poor result",
-            "Fair accuracy and transparency", "Unclear model output"
+            "Good AI explanation",
+            "Poor result",
+            "Fair accuracy and transparency",
+            "Unclear model output"
         ]
         labels = [1, 0, 1, 0]
         model = Pipeline([
@@ -43,8 +42,10 @@ class SHAPExplainer:
         try:
             X_transformed = self.vectorizer.transform([text])
             shap_values = self.explainer(X_transformed)
+
+            # Get tokens
             tokens = self.vectorizer.inverse_transform(X_transformed)[0]
-            scores = shap_values.values[0][:len(tokens)]
+            scores = shap_values.values[0][0:len(tokens)]
 
             return {
                 "tokens": list(tokens),
