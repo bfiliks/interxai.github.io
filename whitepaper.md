@@ -4,7 +4,9 @@ title: White Paper
 permalink: /whitepaper/
 ---
 
-# InterXAI White Paper
+<div class="whitepaper">
+
+# 📄 InterXAI White Paper
 
 ## Reimagining Explainable AI through Intertextual Critique  
 *Version 1.0 – July 2025*
@@ -12,14 +14,18 @@ permalink: /whitepaper/
 ---
 
 ## Executive Summary
-InterXAI is a human-centered platform that bridges Explainable AI (XAI) and intertextual analysis. It empowers users to compare machine-generated model explanations with human interpretations, fostering critical engagement, accountability, and enriched understanding of AI behavior. Combining computational linguistics, literary methods, and digital humanities, InterXAI offers a hybrid framework for interpretability and critique in machine learning systems.
+
+**InterXAI** is a human-centered platform that bridges Explainable AI (XAI) and intertextual analysis. It empowers users to compare machine-generated model explanations with human interpretations, fostering critical engagement, accountability, and enriched understanding of AI behavior.
+
+Combining computational linguistics, literary methods, and digital humanities, InterXAI offers a hybrid framework for interpretability and critique in machine learning systems.
 
 ---
 
 ## 1. Vision & Purpose
+
 Modern AI systems are increasingly opaque, and existing XAI tools often center the machine’s perspective. InterXAI flips the lens. We ask not just *how* a model works—but *how* its outputs are interpreted, challenged, and reframed by human users.
 
-By drawing from fields like hermeneutics, reader-response theory, and intertextuality, InterXAI offers a method to analyze, visualize, and question AI decisions in light of cultural, ethical, and narrative frames.
+By drawing from hermeneutics, reader-response theory, and intertextuality, InterXAI provides a method to analyze, visualize, and question AI decisions in light of cultural, ethical, and narrative frames.
 
 ---
 
@@ -38,7 +44,7 @@ By drawing from fields like hermeneutics, reader-response theory, and intertextu
 ### 🔗 Intertextual Linker
 - Links model outputs to external corpora (e.g., Wikipedia, classic texts, media archives)  
 - Highlights allusions, reused phrasing, or conceptual drift  
-- Integrates with existing NLP pipelines for text similarity and citation detection
+- Integrates with NLP pipelines for text similarity and citation detection
 
 ### 🧲 Comparison Orchestrator
 - Merges machine and human insights side-by-side  
@@ -64,11 +70,12 @@ By drawing from fields like hermeneutics, reader-response theory, and intertextu
 - **Integration:** LLMs, SHAP/LIME, Intertextual APIs  
 - **Export:** PDF/HTML/JSON formats for scholarly, public, or audit purposes  
 
-Deployment available via GitHub Pages + Netlify frontend. A companion Streamlit dashboard powers real-time analysis and comparison.
+Deployment: GitHub Pages + Netlify frontend. Companion Streamlit dashboard supports real-time analysis and comparison.
 
 ---
 
 ## 5. Technical Stack
+
 - Python, Streamlit, SHAP, LIME, Hugging Face Transformers  
 - Jekyll, GitHub Pages, Netlify (UI & publishing)  
 - Integration-ready with spaCy, Gensim, Wikidata APIs
@@ -76,14 +83,16 @@ Deployment available via GitHub Pages + Netlify frontend. A companion Streamlit 
 ---
 
 ## 6. Contribution & Collaboration
+
 InterXAI is an open, evolving project. You can:  
-- [Submit a case study](https://interxai.netlify.app/submit)  
-- [Collaborate with us](https://interxai.netlify.app/collaborate)  
-- Explore existing [blog posts](https://interxai.netlify.app/blog) and [case studies](https://interxai.netlify.app/case-studies)
+- [Submit a case study]({{ site.baseurl }}/submit)  
+- [Collaborate with us]({{ site.baseurl }}/collaborate)  
+- Explore [case studies]({{ site.baseurl }}/case-studies) and the [blog]({{ site.baseurl }}/blog)
 
 ---
 
 ## 7. Future Roadmap
+
 - 🔍 Inter-Annotator Analysis Module  
 - 🧜 Visualization of Intertextual Threads  
 - 📃 Dataset Builder for XAI + Human Commentary  
@@ -92,20 +101,25 @@ InterXAI is an open, evolving project. You can:
 ---
 
 ## 8. Licensing & Ethics
-InterXAI embraces the values of transparency, interpretability, and scholarly openness. Code is released under MIT License, with research outputs licensed as Creative Commons (CC-BY-SA). We uphold ethical AI development and inclusive critique.
+
+InterXAI values transparency, interpretability, and scholarly openness.  
+- Code: MIT License  
+- Research Outputs: Creative Commons (CC-BY-SA)  
+- Commitments: Ethical AI development & inclusive critique
 
 ---
 
 ## 9. Contact
+
 **Project Lead:** Felix B. Oke  
 📧 [bfiliks4xt@gmail.com](mailto:bfiliks4xt@gmail.com)  
 🔗 [GitHub](https://github.com/bfiliks) | [LinkedIn](https://www.linkedin.com/in/felixoke/)  
-
-Website: [https://interxai.netlify.app](https://interxai.netlify.app)
+🌐 Website: [interxai.netlify.app](https://interxai.netlify.app)
 
 ---
 
-## 📄 Download
+## 📥 Download This White Paper
 
-<a href="{{ site.baseurl }}/assets/img/InterXAI_Whitepaper.pdf" download class="download-button">⬇️ Download this Whitepaper (PDF)</a>
+<a href="{{ site.baseurl }}/assets/img/InterXAI_Whitepaper.pdf" download class="download-button">⬇️ Download the InterXAI White Paper (PDF)</a>
 
+</div>
