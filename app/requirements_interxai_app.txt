@@ -1,0 +1,13 @@
+streamlit
+pandas
+scikit-learn
+shap
+lime
+matplotlib
+numpy
+spacy
+gensim
+transformers
+torch
+sentence-transformers
+plotly
