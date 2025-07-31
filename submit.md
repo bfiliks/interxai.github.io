@@ -12,28 +12,30 @@ Please fill out the form below. Your submission will be reviewed and may be feat
 
 <details>
   <summary><strong>❓ What is a Case Study? What Should I Submit?</strong></summary>
-
   <div style="margin-top: 1rem;">
+    <p>A <strong>case study</strong> is a real or hypothetical example that illustrates how human-centered explainability and intertextual critique can be applied in AI contexts.</p>
 
-  A case study is a real or hypothetical example that illustrates how human-centered explainability and intertextual critique can be applied in AI contexts.
+    <h4>✅ Why Submit?</h4>
+    <ul>
+      <li>Build a diverse gallery of applied examples</li>
+      <li>Highlight community innovations</li>
+      <li>Stimulate new research and applications</li>
+    </ul>
 
-  ### ✅ Why Submit?
-  Submitting helps InterXAI:
-  - Build a diverse gallery of applied examples  
-  - Highlight community innovations  
-  - Stimulate new research and applications  
+    <h4>📝 What to Include</h4>
+    <ul>
+      <li><strong>Title</strong> of your case study</li>
+      <li><strong>Summary:</strong> What is it about? What model or dataset did you use?</li>
+      <li><strong>Tags:</strong> E.g., "GPT-4, ethics, metaphor, SHAP, literary analysis"</li>
+      <li><strong>Link or Upload:</strong> Submit your work as a PDF or a link (Google Doc, blog, GitHub, etc.)</li>
+    </ul>
 
-  ### 📝 What to Include
-  - **Title** of your case study  
-  - **Summary**: What is it about? What model or dataset did you use?  
-  - **Tags**: E.g., "GPT-4, ethics, metaphor, SHAP, literary analysis"  
-  - **Link or Upload**: Submit your work as a PDF or a link (Google Doc, blog, GitHub, etc.)
-
-  ### 📌 Tips
-  - Showcase how a model was explained, critiqued, or reinterpreted  
-  - Include visuals or commentary if possible  
-  - You don’t have to be an expert—experiences, student work, or exploratory ideas are welcome!
-
+    <h4>📌 Tips</h4>
+    <ul>
+      <li>Showcase how a model was explained, critiqued, or reinterpreted</li>
+      <li>Include visuals or commentary if possible</li>
+      <li>You don’t have to be an expert—student work, exploratory ideas, and reflections are welcome!</li>
+    </ul>
   </div>
 </details>
 
