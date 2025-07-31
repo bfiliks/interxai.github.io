@@ -11,3 +11,5 @@ transformers
 torch
 sentence-transformers
 plotly
+joblib
+altair
