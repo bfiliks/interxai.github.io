@@ -1,4 +1,3 @@
-# lime_explainer.py
 """
 LIMEExplainer module for InterXAI
 Generates LIME explanations for model predictions.
@@ -17,16 +16,17 @@ class LIMEExplainer:
 
     def _load_model(self):
         try:
-            model = joblib.load("model_pipeline.pkl")
-            return model
+            return joblib.load("model_pipeline.pkl")
         except FileNotFoundError:
             return self._train_fallback_model()
 
     def _train_fallback_model(self):
         # Fallback model for demo/testing
         sample_texts = [
-            "Good AI explanation", "Poor result",
-            "Fair accuracy and transparency", "Unclear model output"
+            "Good AI explanation",
+            "Poor result",
+            "Fair accuracy and transparency",
+            "Unclear model output"
         ]
         labels = [1, 0, 1, 0]
         model = Pipeline([
@@ -39,7 +39,11 @@ class LIMEExplainer:
 
     def explain(self, text: str):
         try:
-            explanation = self.explainer.explain_instance(text, self.model.predict_proba, num_features=5)
+            explanation = self.explainer.explain_instance(
+                text,
+                self.model.predict_proba,
+                num_features=5
+            )
             return {
                 "tokens": [token for token, _ in explanation.as_list()],
                 "weights": [round(weight, 4) for _, weight in explanation.as_list()]
