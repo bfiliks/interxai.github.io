@@ -1,8 +1,4 @@
 # shap_explainer.py
-"""
-SHAPExplainer module for InterXAI
-Generates SHAP explanations for model predictions.
-"""
 
 import shap
 import joblib
@@ -16,15 +12,19 @@ class SHAPExplainer:
         self.model = self._load_model()
         self.vectorizer = self.model.named_steps["tfidf"]
 
-        # Background data for SHAP (raw text)
+        # Background data (raw text)
         background_texts = [
             "AI needs transparency.",
             "Explainability matters in ML.",
-            "Good and bad predictions exist."
+            "Some predictions are fair.",
+            "This model is good."
         ]
 
-        # SHAP expects a pipeline: we use the whole pipeline
-        self.explainer = shap.Explainer(self.model, self.vectorizer.transform(background_texts))
+        # Pre-transform background data
+        self.background_data = self.vectorizer.transform(background_texts)
+
+        # SHAP kernel explainer with predict_proba
+        self.explainer = shap.Explainer(self.model.predict_proba, self.background_data)
 
     def _load_model(self):
         try:
@@ -33,7 +33,6 @@ class SHAPExplainer:
             return self._train_fallback_model()
 
     def _train_fallback_model(self):
-        # Fallback model for testing/demo purposes
         sample_texts = [
             "Good AI explanation", "Poor result",
             "Fair accuracy and transparency", "Unclear model output"
@@ -49,18 +48,21 @@ class SHAPExplainer:
 
     def explain(self, text: str):
         try:
-            # Input for SHAP should be raw text if pipeline includes vectorizer
-            shap_values = self.explainer([text])
-            tokens = shap_values.data[0]
-            scores = shap_values.values[0].tolist()
+            transformed = self.vectorizer.transform([text])
+            shap_values = self.explainer(transformed)
+
+            # Map back token importance using inverse_transform
+            tokens = self.vectorizer.inverse_transform(transformed)[0]
+            scores = shap_values.values[0][:len(tokens)]
+
             return {
-                "tokens": tokens,
-                "importance": scores
+                "tokens": list(tokens),
+                "importance": list(scores)
             }
         except Exception as e:
             return {"error": str(e)}
 
-# Test locally
+# Local test
 if __name__ == "__main__":
     explainer = SHAPExplainer()
     result = explainer.explain("This model is hard to understand.")
