@@ -1,3 +1,4 @@
+# shap_explainer.py
 """
 SHAPExplainer module for InterXAI
 Generates SHAP explanations for model predictions.
@@ -14,7 +15,16 @@ class SHAPExplainer:
     def __init__(self):
         self.model = self._load_model()
         self.vectorizer = self.model.named_steps["tfidf"]
-        self.explainer = shap.Explainer(self.model.predict_proba, self.vectorizer.transform)
+        
+        # Provide a small background dataset for SHAP explainer initialization
+        background_texts = [
+            "AI is powerful but needs explanation.",
+            "Machine learning predictions need clarity."
+        ]
+        background_data = self.vectorizer.transform(background_texts)
+
+        # SHAP expects transformed input, not transform function
+        self.explainer = shap.Explainer(self.model.predict_proba, background_data)
 
     def _load_model(self):
         try:
@@ -24,10 +34,8 @@ class SHAPExplainer:
 
     def _train_fallback_model(self):
         sample_texts = [
-            "Good AI explanation",
-            "Poor result",
-            "Fair accuracy and transparency",
-            "Unclear model output"
+            "Good AI explanation", "Poor result",
+            "Fair accuracy and transparency", "Unclear model output"
         ]
         labels = [1, 0, 1, 0]
         model = Pipeline([
@@ -43,9 +51,9 @@ class SHAPExplainer:
             X_transformed = self.vectorizer.transform([text])
             shap_values = self.explainer(X_transformed)
 
-            # Get tokens
+            # Retrieve tokens and importance scores
             tokens = self.vectorizer.inverse_transform(X_transformed)[0]
-            scores = shap_values.values[0][0:len(tokens)]
+            scores = shap_values.values[0][:len(tokens)]
 
             return {
                 "tokens": list(tokens),
