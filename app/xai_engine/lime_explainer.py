@@ -1,3 +1,4 @@
+# lime_explainer.py
 """
 LIMEExplainer module for InterXAI
 Generates LIME explanations for model predictions.
@@ -8,6 +9,7 @@ from lime.lime_text import LimeTextExplainer
 from sklearn.pipeline import Pipeline
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
+
 
 class LIMEExplainer:
     def __init__(self):
@@ -21,7 +23,7 @@ class LIMEExplainer:
             return self._train_fallback_model()
 
     def _train_fallback_model(self):
-        # Fallback model for demo/testing
+        # Fallback for demonstration or testing
         sample_texts = [
             "Good AI explanation",
             "Poor result",
@@ -44,12 +46,14 @@ class LIMEExplainer:
                 self.model.predict_proba,
                 num_features=5
             )
+            # Return structured list
             return {
                 "tokens": [token for token, _ in explanation.as_list()],
                 "weights": [round(weight, 4) for _, weight in explanation.as_list()]
             }
         except Exception as e:
             return {"error": str(e)}
+
 
 # Local test
 if __name__ == "__main__":
